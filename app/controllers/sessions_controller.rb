@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
 
 		if user && user.authenticate(params[:session][:password])
 			sign_in user
+			remember user
 			redirect_to user
 		else
 			flash[:error] = "Invalid username or password"
