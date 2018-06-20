@@ -1,7 +1,16 @@
-<%= @user.username %>
-<%= @user.email %>
-<% unless @user.avatar.attachment.nil? %>
-	<%= image_tag @user.avatar%>
-<% else %>
-	<img src="https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder-300-grey.jpg">
-<% end %>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+      	<% unless @user.avatar.attachment.nil? %>
+			<%= image_tag @user.avatar%>
+		<% else %>
+			<img src="https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder-300-grey.jpg">
+		<% end %>
+       	<%= @user.username %>
+		<%= @user.email %>
+      </h1>
+    </section>
+  </aside>
+</div>

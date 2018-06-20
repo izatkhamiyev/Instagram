@@ -1,6 +1,7 @@
 <% @title = "Homepage"%>
-
-<h1>Welcome to Intagram!</h1>
-<% if signed_in? %>
-	<h2><%= current_user.username %></h2>
-<%end%>
+<div class = "center jumbotron">
+	<h1>Welcome to Intagram!</h1>
+	<% if signed_in? %>
+		<h2><%= current_user.username %></h2>
+	<%end%>
+</div>

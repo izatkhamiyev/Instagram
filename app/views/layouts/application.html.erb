@@ -11,6 +11,12 @@
 
   <body>
     <%= render "partials/header" %>
-    <%= yield %>
+    <div class = "container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
+      <%= render "partials/footer"%>
+    </div>
   </body>
 </html>
