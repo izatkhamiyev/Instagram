@@ -1,14 +1,22 @@
-<%= form_for @user do |f|%>
-	<% if @user.errors %>
-		<ul>
-			<% @user.errors.full_messages.each do |m|%>
-				<li><%= m %></li>
-			<% end %>
-		</ul>
-	<% end %>
-		<%= f.text_field :username, placeholder: "username" %>
-		<%= f.text_field :email, placeholder: "email" %>
-		<%= f.password_field :password, placeholder: "password" %>
-		<%= f.file_field :avatar %>
-		<%= f.submit "Save changes",class: "btn btn-primary" %>
-<% end %>
+<h1>Edit your profile</h1>
+<div class = "row">
+	<div class="col-md-6 col-md-offset-3">
+		<%= form_for @user do |f|%>
+			<%= render 'shared/error_messages' %>
+			<%= f.label :username%>
+			<%= f.text_field :username, placeholder: "username",class: 'form-control' %>
+			<%= f.label :email%>
+			<%= f.text_field :email, placeholder: "email",class: 'form-control' %>
+			<%= f.label :password%>
+			<%= f.password_field :password, placeholder: "password", class: 'form-control' %>
+			<% unless @user.avatar.attachment.nil? %>
+			 	<%= image_tag @user.avatar, class: "image_edit img-fluid"%>
+			<% else %>
+				<img class="image_edit img-fluid", src="https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder-300-grey.jpg">
+		  	<% end %>
+		  	<%= f.file_field :avatar%>
+		  	<%= f.submit "Save changes", class: "btn btn-primary"%>
+		<% end %>
+	</div>
+	
+</div>
