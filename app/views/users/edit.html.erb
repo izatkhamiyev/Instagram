@@ -10,9 +10,9 @@
 			<%= f.label :password%>
 			<%= f.password_field :password, placeholder: "password", class: 'form-control' %>
 			<% unless @user.avatar.attachment.nil? %>
-			 	<%= image_tag @user.avatar, class: "image_edit img-fluid"%>
+			 	<%= image_tag @user.avatar, class: " img-fluid"%>
 			<% else %>
-				<img class="image_edit img-fluid", src="https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder-300-grey.jpg">
+				<img class="img-fluid", src="https://www.bsn.eu/wp-content/uploads/2016/12/user-icon-image-placeholder-300-grey.jpg">
 		  	<% end %>
 		  	<%= f.file_field :avatar%>
 		  	<%= f.submit "Save changes", class: "btn btn-primary"%>
