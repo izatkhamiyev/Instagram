@@ -3,7 +3,8 @@ class User < ApplicationRecord
 	has_secure_password
 	has_one_attached :avatar
 	has_many :posts
-
+	has_many :likes
+	
 	validates :username, presence: true, length: {maximum: 30 }, uniqueness: {case_sensative: false}
 	validates :email, presence: true, uniqueness: {case_sensative: false}
  	validates :password, length: {minimum: 6, maximum: 30}
