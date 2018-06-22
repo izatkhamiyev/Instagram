@@ -19,14 +19,12 @@
 					<%= f.submit :submit, class: "btn btn-outline-success" %>
 				<% end %>
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-5">
 			<%= render @feed %>
 		</div>
 	</div>
 <% else %>
 	<div class="jumbotron">
-		<h1>Welcome to Intagram!</h1>
-		<%= link_to "Sign in", login_path, class: "btn btn-primary" %> 
-		<%= link_to "Register", signup_path, class: "btn btn-outline-info" %>
+		<h1>Welcome to Instagram!</h1>
 	</div>
 <% end %>

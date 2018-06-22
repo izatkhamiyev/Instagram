@@ -131,8 +131,8 @@ input {
 
 .img-fluid{
   float:left;
-  width:150px;
-  height:150px;
+  width:100px;
+  height:100px;
   margin-bottom:10px;
   margin-right:10px;
 }
@@ -147,4 +147,24 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+.post_img{
+  float:left;
+  width:100px;
+  height:100px;
+  margin-bottom:10px;
+  margin-up:20px;
+  margin-right:10px;
+  display: inline-block;
+}
+.well{
+  border: 4px double black;
+  overflow:auto;
+  position:relative;
+}
+
+#del{
+    position:absolute;
+    bottom:5px;
+    right:5px;
 }

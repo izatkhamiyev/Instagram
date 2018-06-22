@@ -1,9 +1,10 @@
 
 <div class="well">
 	<% if post.image.attachment %>
-		<%= image_tag post.image, class: "img-fluid img-thumbnail" %>
+		<figure>
+		<%= image_tag post.image, class: "post_img img-thumbnail" %>
+	</figure>
 	<% end %>
 	<p><%= post.body %></p> 
-	
-	<%= link_to "Delete", post, method: :delete, data: {confirm: "U sure?"} %>
+	<%= link_to "Delete", post,id: "del", method: :delete, data: {confirm: "U sure?"} %>
 </div>
