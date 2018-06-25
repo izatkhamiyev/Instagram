@@ -1,1 +1,1 @@
-alert()
+$("#like-<%= @post_id %>").html("<%= escape_javascript(render('likes/like', post_id: @post_id, count: @count))%>");
